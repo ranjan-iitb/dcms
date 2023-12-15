@@ -1,0 +1,27 @@
+Map<String, Map<String, Object>> milestonesMap = new LinkedHashMap<>();
+
+        for (MilestoneActivityRel relEntity : milestoneActivityRelEntities) {
+            String milestoneName = relEntity.getMilestoneId().getMilestoneName();
+
+            // Check if the milestone exists in the map
+            Map<String, Object> milestoneData = milestonesMap.computeIfAbsent(milestoneName, k -> new LinkedHashMap<>());
+
+            milestoneData.put("Deadline", formatDate(relEntity.getMilestoneEndDate()));
+
+            // Get the existing subtask map or create a new one
+            Map<String, Object> subTaskMap = (Map<String, Object>) milestoneData.getOrDefault("subTask", new LinkedHashMap<>());
+
+            Map<String, Object> subtaskData = new LinkedHashMap<>();
+            subtaskData.put("start_time", formatDate(relEntity.getActivityStartDate()));
+            subtaskData.put("end_time", formatDate(relEntity.getActivityEndDate()));
+
+            // Add subtask data to the subTask map
+            subTaskMap.put(relEntity.getActivityId().getActivityName(), subtaskData);
+
+            // Update the subTask map in the milestoneData
+            milestoneData.put("subTask", subTaskMap);
+        }
+
+        modelDataDTO.setMilestones(milestonesMap);
+
+        return modelDataDTO;
