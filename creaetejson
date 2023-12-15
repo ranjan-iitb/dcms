@@ -1,0 +1,270 @@
+
+    "Model_Data": {
+        "General_info": {
+            "NtUser": "",
+            "user_email": "ranjan@maruti.co.in",
+            "Model_Name": "YY17",
+            "Type": "2",
+            "Design_Responsibility": "Maruti",
+            "Developement_Responsilbity": "Suzuki",
+            "Description": "No description as of now"
+        },
+        "Milestones": {
+            "Kick-Off": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Concept": {
+                "Deadline": "18/11/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/11/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/01/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/10/2023"
+                    }
+                }
+            },
+            "Sketch_Final": {
+                "Deadline": "18/10/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Model_Selection": {
+                "Deadline": "18/10/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Rough_Cad": {
+                "Deadline": "18/04/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "50_Cad": {
+                "Deadline": "18/02/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "90_Cad": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "100_Cad": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Big_part_Drawing": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Small_part_Drawing": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "DP_Trails": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "PP_Trails": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "MPP_Trails": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Pilot": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            },
+            "Soap": {
+                "Deadline": "18/12/2023",
+                "subTask": {
+                    "Design Check Sheet-1": {
+                        "start_time": "12/06/2022",
+                        "end_time": "15/12/2022"
+                    },
+                    "Prior Mule verification": {
+                        "start_time": "13/08/2022",
+                        "end_time": "23/02/2023"
+                    },
+                    "Designer CAE-Rough": {
+                        "start_time": "03/01/2023",
+                        "end_time": "06/09/2023"
+                    }
+                }
+            }
+        }
+    }
+}
