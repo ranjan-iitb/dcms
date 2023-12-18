@@ -1,0 +1,204 @@
+public class CreateModelDTO {
+    @JsonProperty("General_info")
+    private GenralInfoDataDTO generalInfo;
+    @JsonProperty("Milestones")
+    private Map<String, Map<String, List<String>>> milestones;
+    
+}
+
+
+public class GenralInfoDataDTO {
+
+    @JsonProperty("Type")
+    Object type;
+    @JsonProperty("Developement_Responsilbity")
+    Object development;
+    @JsonProperty("Design_Responsibility")
+    Object design;
+}
+
+
+
+public class CreateDataService {
+
+    @Autowired
+    DesignResponsibiltyRepository designResponsibiltyRepository;
+    @Autowired
+    DevelopmentResponsibilityRepository developmentResponsibilityRepository;
+    @Autowired
+    MilestoneActivityMappingRepository milestoneActivityMappingRepository;
+    @Autowired
+    TypeRepository typeRepository;
+    @Autowired
+    MilestoneMasterRepository milestoneMasterRepository;
+
+public CreateModelDTO createModelTemplate(){
+
+
+    List<TypeMaster> typeMaster = typeRepository.findAll();
+    List<DesignResponsibility> designResponsibiltyList = designResponsibiltyRepository.findAll();
+    List<DevelopmentResponsibility> developmentResponsibilityList = developmentResponsibilityRepository.findAll();
+    List<MilestoneMaster> milestoneMasterList = milestoneMasterRepository.findAll();
+
+
+    //Map<String, Object> type = new HashMap<>();
+    List<String> typeVal = new ArrayList<>();
+    for(TypeMaster t : typeMaster){
+        typeVal.add(t.getName());
+
+    }
+    //type.put("type", typeVal);
+
+   // Map<String, Object> designmap = new HashMap<>();
+    List<String> desingval = new ArrayList<>();
+    for(DesignResponsibility t : designResponsibiltyList){
+        desingval.add(t.getName());
+
+    }
+   // designmap.put("designResponsibility", desingval);
+
+   // Map<String, Object> developmap = new HashMap<>();
+    List<String> developval = new ArrayList<>();
+    for(DevelopmentResponsibility dd : developmentResponsibilityList){
+        developval.add(dd.getName());
+
+    }
+   // developmap.put("developmentResponsibility", developval);
+
+    GenralInfoDataDTO genralInfoDataDTO = GenralInfoDataDTO.builder().type(typeVal).development(developval).design(desingval).build();
+
+    Map<String, Map<String, List<String>>> milestonesMap = new LinkedHashMap<>();
+    for(MilestoneMaster m : milestoneMasterList){
+        List<MilestoneActivityMapping> milestoneActivityMappingOptional = milestoneActivityMappingRepository.findAllByMilestoneId_MilestoneId(m.getMilestoneId());
+        String milestoneName = m.getMilestoneName();
+        // Check if the milestone exists in the map
+        Map<String, List<String>> milestoneData = milestonesMap.computeIfAbsent(milestoneName, k -> new LinkedHashMap<>()); ;
+       // Map<String, Object> milestoneData = new LinkedHashMap<>();
+
+        if(milestoneActivityMappingOptional.isEmpty()){
+            // Get the existing subtask map or create a new one
+
+        }
+        else{
+
+            List<String> subtaskNames = new ArrayList<>();
+            for (MilestoneActivityMapping mp : milestoneActivityMappingOptional) {
+                subtaskNames.add(mp.getActivityId().getActivityName());
+            }
+           // milestonesMap.remove(milestoneName);
+            milestonesMap.get(milestoneName).put("subTask",subtaskNames);
+
+        }
+       // milestonesMap.put("Milestones", milestoneData);
+    }
+    CreateModelDTO createModelDTO = new CreateModelDTO();
+    createModelDTO.setGeneralInfo(genralInfoDataDTO);
+    createModelDTO.setMilestones(milestonesMap);
+
+return createModelDTO;
+
+}
+
+}
+
+
+ "Model_data": {
+        "General_info": {
+            "Type": [
+                "1",
+                "2",
+                "3"
+            ],
+            "Developement_Responsilbity": [
+                "msil"
+            ],
+            "Design_Responsibility": [
+                "msil"
+            ]
+        },
+        "Milestones": {
+            "KickOff": {},
+            "Concept": {},
+            "Sketch_Final": {
+                "subTask": [
+                    "Kickoff / Strategy DR",
+                    "Development DR",
+                    "Condensation DR-1",
+                    "Appearance proto DR",
+                    "Structure Briefing DR"
+                ]
+            },
+            "Model_Selection": {},
+            "Rough_Cad": {
+                "subTask": [
+                    "DCMS",
+                    "Merchantability DR",
+                    "ControlConcept DR",
+                    "ISO 26262 verification review",
+                    "Aerodynamics DR-1"
+                ]
+            },
+            "50_Cad": {
+                "subTask": [
+                    "Design Check Sheet-1",
+                    "Designer CAE-Rough",
+                    "Concept DR",
+                    "Cross Section DR",
+                    "Body Design Section DR",
+                    "Rust DR-1",
+                    "MGR DR-1",
+                    "Mikri DR-1"
+                ]
+            },
+            "90_Cad": {
+                "subTask": [
+                    "Final Req. DR",
+                    "MGR DR-2"
+                ]
+            },
+            "100_Cad": {
+                "subTask": [
+                    "Design Check Sheet-2",
+                    "Designer CAE-Final",
+                    "Mikri DR-2",
+                    "UNR DR",
+                    "MR DR/A surface DR",
+                    "DMDR",
+                    "Rust DR-2",
+                    "Aerodynamics DR-2"
+                ]
+            },
+            "Big_part_Drawing": {
+                "subTask": [
+                    "FMEA DR"
+                ]
+            },
+            "Small_part_Drawing": {
+                "subTask": [
+                    "Condensation DR-2",
+                    "Drawing DR",
+                    "Tool Go Ahead DR",
+                    "Supplier DR"
+                ]
+            },
+            "DP_Trails": {},
+            "PP_Trails": {
+                "subTask": [
+                    "SES QC-Rough",
+                    "Engineering Dr/Static DR"
+                ]
+            },
+            "MPP_Trails": {
+                "subTask": [
+                    "SES QC-Final",
+                    "Design Quality Gate",
+                    "Homologation-Certificate"
+                ]
+            },
+            "Pilot": {},
+            "Soap": {
+                "subTask": [
+                    "Review DR"
+                ]
+            }
+        }
